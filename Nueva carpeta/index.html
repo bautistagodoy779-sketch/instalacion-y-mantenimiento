@@ -1,0 +1,387 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Domótica Inteligente</title>
+
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🏠 Domótica
+            </div>
+
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#que-es">¿Qué es?</a></li>
+                <li><a href="#dispositivos">Dispositivos</a></li>
+                <li><a href="#panel">Panel</a></li>
+            </ul>
+
+            <button id="modoBtn" class="modo-btn">
+                🌙
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= INICIO ================= -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+
+            <p class="subtitulo">
+                TECNOLOGÍA PARA EL HOGAR
+            </p>
+
+            <h1>
+                Domótica
+                <span>Inteligente</span>
+            </h1>
+
+            <p>
+                La domótica permite automatizar y controlar
+                diferentes dispositivos de una vivienda para
+                mejorar la comodidad, seguridad y eficiencia
+                energética.
+            </p>
+
+            <a href="#que-es" class="boton">
+                Conocer más
+            </a>
+
+        </div>
+
+        <div class="hero-icon">
+            🏠
+        </div>
+
+    </section>
+
+
+    <!-- ================= ¿QUÉ ES? ================= -->
+    <section id="que-es" class="seccion">
+
+        <h2>¿Qué es la domótica?</h2>
+
+        <p class="descripcion">
+            La domótica es el conjunto de tecnologías que permite
+            automatizar una vivienda mediante sensores, dispositivos
+            inteligentes y sistemas de control.
+        </p>
+
+
+        <div class="beneficios">
+
+            <div class="beneficio">
+                <div class="icono">💡</div>
+                <h3>Ahorro energético</h3>
+                <p>
+                    Permite controlar automáticamente luces,
+                    climatización y otros equipos.
+                </p>
+            </div>
+
+            <div class="beneficio">
+                <div class="icono">🔒</div>
+                <h3>Seguridad</h3>
+                <p>
+                    Sensores y cámaras pueden ayudar a controlar
+                    el acceso y detectar situaciones.
+                </p>
+            </div>
+
+            <div class="beneficio">
+                <div class="icono">📱</div>
+                <h3>Control remoto</h3>
+                <p>
+                    Los dispositivos pueden controlarse desde
+                    una computadora o teléfono.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DISPOSITIVOS ================= -->
+    <section id="dispositivos" class="seccion dispositivos">
+
+        <h2>Dispositivos inteligentes</h2>
+
+        <p class="descripcion">
+            Algunos de los dispositivos más utilizados en
+            sistemas domóticos son:
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">💡</div>
+                <h3>Luces inteligentes</h3>
+                <p>
+                    Permiten controlar la iluminación
+                    automáticamente.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🌡️</div>
+                <h3>Termostatos</h3>
+                <p>
+                    Permiten controlar la temperatura
+                    de diferentes ambientes.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">📷</div>
+                <h3>Cámaras</h3>
+                <p>
+                    Permiten supervisar diferentes
+                    zonas de una vivienda.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🚪</div>
+                <h3>Cerraduras inteligentes</h3>
+                <p>
+                    Permiten controlar el acceso
+                    mediante sistemas electrónicos.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🔊</div>
+                <h3>Asistentes</h3>
+                <p>
+                    Permiten interactuar con dispositivos
+                    mediante comandos de voz.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3>Internet de las cosas</h3>
+                <p>
+                    Conecta diferentes dispositivos para
+                    intercambiar información.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PANEL ================= -->
+    <section id="panel" class="seccion panel">
+
+        <h2>Panel de control</h2>
+
+        <p class="descripcion">
+            Probá este pequeño panel de una casa inteligente.
+        </p>
+
+
+        <div class="panel-grid">
+
+            <!-- LUCES -->
+            <div class="control">
+
+                <div class="control-header">
+                    <span>💡</span>
+                    <h3>Iluminación</h3>
+                </div>
+
+                <p id="estadoLuz">
+                    Estado: Apagadas
+                </p>
+
+                <button id="luzBtn" onclick="cambiarLuz()">
+                    Encender luces
+                </button>
+
+            </div>
+
+
+            <!-- TEMPERATURA -->
+            <div class="control">
+
+                <div class="control-header">
+                    <span>🌡️</span>
+                    <h3>Temperatura</h3>
+                </div>
+
+                <div class="temperatura">
+                    <span id="temperatura">22</span>°C
+                </div>
+
+                <button onclick="cambiarTemperatura()">
+                    Cambiar temperatura
+                </button>
+
+            </div>
+
+
+            <!-- SEGURIDAD -->
+            <div class="control">
+
+                <div class="control-header">
+                    <span>🔒</span>
+                    <h3>Seguridad</h3>
+                </div>
+
+                <p id="estadoSeguridad">
+                    Sistema desactivado
+                </p>
+
+                <button onclick="cambiarSeguridad()">
+                    Activar seguridad
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <h3>🏠 Domótica Inteligente</h3>
+
+        <p>
+            Tecnología aplicada al hogar.
+        </p>
+
+        <p class="copyright">
+            © 2026 - Proyecto educativo
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // -----------------------------
+        // CONTROL DE LUCES
+        // -----------------------------
+
+        let lucesEncendidas = false;
+
+        function cambiarLuz() {
+
+            const estado = document.getElementById("estadoLuz");
+            const boton = document.getElementById("luzBtn");
+
+            lucesEncendidas = !lucesEncendidas;
+
+            if (lucesEncendidas) {
+
+                estado.textContent = "Estado: Encendidas 💡";
+                boton.textContent = "Apagar luces";
+
+            } else {
+
+                estado.textContent = "Estado: Apagadas";
+                boton.textContent = "Encender luces";
+
+            }
+        }
+
+
+        // -----------------------------
+        // CONTROL DE TEMPERATURA
+        // -----------------------------
+
+        let temperatura = 22;
+
+        function cambiarTemperatura() {
+
+            temperatura++;
+
+            if (temperatura > 30) {
+                temperatura = 18;
+            }
+
+            document.getElementById("temperatura").textContent = temperatura;
+        }
+
+
+        // -----------------------------
+        // SISTEMA DE SEGURIDAD
+        // -----------------------------
+
+        let seguridadActivada = false;
+
+        function cambiarSeguridad() {
+
+            const estado =
+                document.getElementById("estadoSeguridad");
+
+            seguridadActivada = !seguridadActivada;
+
+            if (seguridadActivada) {
+
+                estado.textContent =
+                    "Sistema activado 🔐";
+
+            } else {
+
+                estado.textContent =
+                    "Sistema desactivado";
+
+            }
+        }
+
+
+        // -----------------------------
+        // MODO OSCURO
+        // -----------------------------
+
+        const modoBtn = document.getElementById("modoBtn");
+
+        modoBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("oscuro");
+
+            if (document.body.classList.contains("oscuro")) {
+
+                modoBtn.textContent = "☀️";
+
+            } else {
+
+                modoBtn.textContent = "🌙";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
